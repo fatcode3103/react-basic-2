@@ -1,0 +1,111 @@
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #fff;
+}
+
+#customers td,
+#customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+    background-color: #d6d6d6;
+}
+
+#customers tr:hover {
+    background-color: #bababa;
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04aa6d;
+    color: white;
+}
+
+.flag {
+    width: 30px;
+    border-radius: 3px;
+    transition: all;
+    // animation: flagActive 2s linear infinite alternate;
+}
+
+@keyframes flagActive {
+    to {
+        opacity: 0.4;
+    }
+    from {
+        opacity: 1;
+    }
+}
+
+@keyframes countryActive {
+    to {
+        color: rgb(241, 241, 241);
+    }
+    from {
+        color: rgb(249, 39, 39);
+    }
+}
+
+.case {
+    color: #333;
+}
+
+.country {
+    color: rgb(249, 39, 39);
+    animation: countryActive 1s linear infinite alternate;
+}
+
+.deaths {
+    color: rgb(249, 39, 39);
+}
+
+.recovered {
+    color: rgb(40, 145, 40);
+}
+
+//loader
+
+.loader {
+    position: relative;
+    width: 80px;
+    height: 45px;
+    margin: auto;
+    margin-top: 140px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#fff 50px, transparent 0),
+        linear-gradient(#fff 50px, transparent 0), linear-gradient(#fff 50px, transparent 0),
+        linear-gradient(#fff 50px, transparent 0), linear-gradient(#fff 50px, transparent 0),
+        linear-gradient(#fff 50px, transparent 0);
+    background-position: 0px center, 15px center, 30px center, 45px center, 60px center, 75px center,
+        90px center;
+    animation: rikSpikeRoll 0.65s linear infinite alternate;
+}
+@keyframes rikSpikeRoll {
+    0% {
+        background-size: 10px 3px;
+    }
+    16% {
+        background-size: 10px 50px, 10px 3px, 10px 3px, 10px 3px, 10px 3px, 10px 3px;
+    }
+    33% {
+        background-size: 10px 30px, 10px 50px, 10px 3px, 10px 3px, 10px 3px, 10px 3px;
+    }
+    50% {
+        background-size: 10px 10px, 10px 30px, 10px 50px, 10px 3px, 10px 3px, 10px 3px;
+    }
+    66% {
+        background-size: 10px 3px, 10px 10px, 10px 30px, 10px 50px, 10px 3px, 10px 3px;
+    }
+    83% {
+        background-size: 10px 3px, 10px 3px, 10px 10px, 10px 30px, 10px 50px, 10px 3px;
+    }
+    100% {
+        background-size: 10px 3px, 10px 3px, 10px 3px, 10px 10px, 10px 30px, 10px 50px;
+    }
+}

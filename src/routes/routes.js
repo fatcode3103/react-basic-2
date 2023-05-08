@@ -1,0 +1,16 @@
+import Find from '~/components/Header/Find';
+import Home from '~/components/Header/Home';
+import Covid19 from '~/components/Header/Covid19';
+import Example from '~/components/Example/Example';
+import Blog from '~/components/Header/Blog';
+import DetailBlog from '~/components/Header/DetailBlog/DetailBlog';
+
+export const publicRoutes = [
+    { path: '/', component: Home },
+    { path: '/find', component: Find },
+    { path: '/cv', component: Covid19 },
+    { path: '/example', component: Example },
+    { path: '/blog', component: Blog },
+    { path: '/blog/:id', component: DetailBlog },
+];
+export const privateRouter = [{}];
