@@ -3,8 +3,6 @@ import { faBackward } from '@fortawesome/free-solid-svg-icons';
 import { useParams, useNavigate } from 'react-router-dom';
 
 import useFetch from '~/customize/fetch';
-import '../Cv.scss';
-import '../Blog.scss';
 
 function DetailBlog() {
     console.log(useParams()); // useParams return an obj {key and value}
@@ -27,7 +25,7 @@ function DetailBlog() {
                     <div className="loader"></div>
                 </>
             ) : (
-                <div>
+                <div className="detail-blog">
                     <div className="back-blog">
                         <span onClick={() => handleBackData()}>
                             <FontAwesomeIcon icon={faBackward} className="icon-blog" />

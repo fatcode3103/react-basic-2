@@ -1,0 +1,29 @@
+.todo {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto;
+}
+.todo-item {
+    padding: 8px 24px;
+    border: 1px dotted #d1d0d0;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 2px;
+}
+
+.btn-delete,
+.btn-edit,
+.btn-save {
+    padding: 2px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.btn-edit {
+    margin-left: 4px;
+}
+
+.btn-save {
+}

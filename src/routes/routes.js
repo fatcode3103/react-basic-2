@@ -1,8 +1,8 @@
-import Find from '~/components/Header/Find';
-import Home from '~/components/Header/Home';
-import Covid19 from '~/components/Header/Covid19';
+import Find from '~/components/Header/Find/Find';
+import Home from '~/components/Header/Home/Home';
+import Covid19 from '~/components/Header/Covid/Covid19';
 import Example from '~/components/Example/Example';
-import Blog from '~/components/Header/Blog';
+import Blog from '~/components/Header/Blog/Blog';
 import DetailBlog from '~/components/Header/DetailBlog/DetailBlog';
 
 export const publicRoutes = [

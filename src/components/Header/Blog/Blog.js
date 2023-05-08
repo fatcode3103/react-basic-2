@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom';
 import useFetch from '~/customize/fetch';
-import './Cv.scss';
 import './Blog.scss';
 
-function Block() {
+function Blog() {
     const { data, loading } = useFetch('https://jsonplaceholder.typicode.com/posts');
     // const newData = data.slice(0, 10);
     return (
@@ -34,4 +33,4 @@ function Block() {
     );
 }
 
-export default Block;
+export default Blog;

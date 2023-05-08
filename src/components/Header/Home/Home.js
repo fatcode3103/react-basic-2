@@ -52,11 +52,13 @@ function Home() {
 
     return (
         <div>
-            {console.log('...render')}
-            <input type="text" value={address} onChange={(e) => handleInput(e)} />{' '}
-            <button type="button" onClick={() => handleAddTodo()}>
-                Add todo
-            </button>
+            <span style={{ fontSize: '20px', fontWeight: '600' }}>Todo list</span> <br />
+            <div style={{ margin: '10px 0' }}>
+                <input type="text" value={address} onChange={(e) => handleInput(e)} />{' '}
+                <button type="button" onClick={() => handleAddTodo()}>
+                    Add todo
+                </button>
+            </div>
             <Todo todo={todo} deleteTodoItem={deleteTodoItem} editTodoItem={editTodoItem} />
         </div>
     );

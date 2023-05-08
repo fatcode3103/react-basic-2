@@ -1,6 +1,8 @@
 import useFetch from '~/customize/fetch';
 
 import './Cv.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSkull, faUserDoctor } from '@fortawesome/free-solid-svg-icons';
 
 function Covid19() {
     const { data, loading } = useFetch('https://corona.lmao.ninja/v2/countries');
@@ -20,8 +22,12 @@ function Covid19() {
                             <tr>
                                 <th>Country</th>
                                 <th>Cases</th>
-                                <th>Recovered</th>
-                                <th>Deaths</th>
+                                <th>
+                                    Recovered <FontAwesomeIcon icon={faUserDoctor} />
+                                </th>
+                                <th>
+                                    Deaths <FontAwesomeIcon icon={faSkull} />
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -37,8 +43,8 @@ function Covid19() {
                                             <p className="country">{item.country}</p>
                                         </td>
                                         <td className="case">{item.cases}</td>
-                                        <td className="deaths">{item.deaths}</td>
                                         <td className="recovered">{item.recovered}</td>
+                                        <td className="deaths">{item.deaths}</td>
                                     </tr>
                                 );
                             })}
