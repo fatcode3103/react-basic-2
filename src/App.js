@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { publicRoutes } from './routes/routes';
 import DefaultLayout from './components/DefaultLayout/DefaultLayout';
+import { Fragment } from 'react';
 
 function App() {
     //re-render
@@ -13,6 +14,9 @@ function App() {
                         {publicRoutes.map((route, index) => {
                             let Page = route.component;
                             let Layout = DefaultLayout;
+                            if (route.layout === null) {
+                                Layout = Fragment;
+                            }
                             return (
                                 <Route
                                     key={index}

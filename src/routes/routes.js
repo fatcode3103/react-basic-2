@@ -5,6 +5,7 @@ import Example from '~/components/Example/Example';
 import Blog from '~/components/Header/Blog/Blog';
 import DetailBlog from '~/components/Header/DetailBlog/DetailBlog';
 import AddNewBlog from '~/components/Header/Blog/AddNewBlog';
+import NotFound from '~/components/NotFound/NotFound';
 
 export const publicRoutes = [
     { path: '/', component: Home },
@@ -14,5 +15,6 @@ export const publicRoutes = [
     { path: '/blog', component: Blog },
     { path: '/blog/:id', component: DetailBlog },
     { path: '/add-new-blog', component: AddNewBlog },
+    { path: '*', component: NotFound, layout: null },
 ];
 export const privateRouter = [{}];
