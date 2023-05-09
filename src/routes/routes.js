@@ -4,6 +4,7 @@ import Covid19 from '~/components/Header/Covid/Covid19';
 import Example from '~/components/Example/Example';
 import Blog from '~/components/Header/Blog/Blog';
 import DetailBlog from '~/components/Header/DetailBlog/DetailBlog';
+import AddNewBlog from '~/components/Header/Blog/AddNewBlog';
 
 export const publicRoutes = [
     { path: '/', component: Home },
@@ -12,5 +13,6 @@ export const publicRoutes = [
     { path: '/example', component: Example },
     { path: '/blog', component: Blog },
     { path: '/blog/:id', component: DetailBlog },
+    { path: '/add-new-blog', component: AddNewBlog },
 ];
 export const privateRouter = [{}];

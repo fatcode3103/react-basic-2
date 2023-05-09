@@ -5,7 +5,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import useFetch from '~/customize/fetch';
 
 function DetailBlog() {
-    console.log(useParams()); // useParams return an obj {key and value}
+    // console.log(useParams()); // useParams return an obj {key and value}
     const { id } = useParams();
     let { data, loading } = useFetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
 
